@@ -11,7 +11,7 @@ function Banner(){
             </p>
 
             <button
-              className="mt-6 inline-flex items-center gap-2 bg-white text-[#479D8D] font-poppins font-medium px-6 h-[48px] rounded-[8px]"
+              className="mt-6 inline-flex items-center gap-2 bg-white text-[#479D8D] font-poppins font-medium px-6 h-[48px] rounded-[8px] cursor-pointer"
             >
               <span>Get this from Jurhy</span>
               <img src="/g-arrow.png" alt="arrow" className="h-5 w-5" />
