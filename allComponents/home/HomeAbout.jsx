@@ -8,7 +8,7 @@ function About (){
 
           <button className="pointer-events-auto flex items-center gap-2 cursor-pointer bg-[linear-gradient(90deg,#4EA291_0%,#4EA291_100%)] text-white font-poppins font-medium px-6 py-2 rounded-[8px] md:rounded-[0px]">
             <span className="text-[14px]">Get this from Jurhy</span>
-            <img src="/IMAGES/shop-arrow.png" alt="" className="w-[16px] h-[16px]" />
+            <img src="/shop-arrow.png" alt="" className="w-[16px] h-[16px]" />
           </button>
         </div>
         <img src="/surgeons.png" alt="surgeons" className=' mt-[20px] w-[100%] lg:h-[84vh]' />
