@@ -8,7 +8,7 @@ import ContactUs from '../../allComponents/contact/ContactUs'
 
 function Conatct(){
     return(
-        <div className='bg-[#FAFAFA]'>
+        <div>
             <Header />
             <TopInfo />
             <ContactUs />

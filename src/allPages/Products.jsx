@@ -1,22 +1,16 @@
 import Header from '../../allComponents/common/Header.jsx'
 import Footer from '../../allComponents/common/Footer.jsx'
-import Prd_Banner from '../../allComponents/product/ProductBanner.jsx'
-import Add from '../../allComponents/product/Add.jsx'
-import Description from '../../allComponents/product/Description.jsx'
-import RelatedProducts from '../../allComponents/product/RelatedProducts.jsx'
+import Prd_Banner from '../../allComponents/common/ProductBanner.jsx'
 import Banner from '../../allComponents/common/Banner.jsx'
+import ProductDetails from "../../allComponents/product/ProductMain"
 
-
-
-function Products() {
+function Products() {  
     return (
         <>
-          <div className='bg-[#FAFAFA]'>
+          <div>
             <Header />
             <Prd_Banner />
-            <Add />
-            <Description />
-            <RelatedProducts />
+            <ProductDetails/>
             <Banner />
             <Footer />
           </div>

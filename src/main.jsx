@@ -6,6 +6,8 @@ import App from './allPages/App'
 import About from './allPages/About'
 import Contact from './allPages/Contact'
 import Product from "./allPages/Products"
+import Details from './allPages/ProductDetails';
+import Add from '../allComponents/productDetails/Add';
 
 const router = createBrowserRouter([
   {
@@ -13,17 +15,22 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/About",
+    path: "/about",
     element: <About />,
   },
   {
-    path: "/Contact",
+    path: "/contact",
     element: <Contact />,
   },
   {
-    path: "/Product",
+    path: "/product",
     element: <Product />,
   },
+  {
+  path: "/product/:name",
+  element: <Details />,
+},
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

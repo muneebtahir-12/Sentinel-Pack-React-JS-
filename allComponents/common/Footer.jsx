@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 function Footer(){
+  const scrollTo=()=>{
+    window.scrollTo(0,0);
+  }
     return(
-        <footer className="bg-[#FAFAFA] pt-[5%]">
+        <footer className="bg-[#FAFAFA] mt-[5%]">
         <div className="flex flex-col lg:flex-row gap-5 lg:gap-0 pt-20 pb-15 justify-between pl-[5%] pr-[5%]">
           <div className="flex flex-col gap-4">
             <img src="/surgicalPacks.png" alt="Surgical Packs" className="w-[124px] h-[50px]"/>
@@ -15,10 +18,10 @@ function Footer(){
           </div>
           <div className="flex flex-col gap-3">
             <h2 className="text-[#1E1E1E] font-nohemi text-[20px] font-medium leading-normal not-italic">Quick Links</h2>
-            <Link to="/" className="mt-3 text-[#716B66] font-poppins text-[16px] not-italic font-normal leading-normal">Home</Link>
-            <Link to="/About" className="text-[#716B66] font-poppins text-[16px] not-italic font-normal leading-normal">About Us</Link>
-            <Link to="/Product" className="text-[#716B66] font-poppins text-[16px] not-italic font-normal leading-normal">Products</Link>
-            <Link to="/Contact" className="text-[#716B66] font-poppins text-[16px] not-italic font-normal leading-normal">Contact Us</Link>
+            <Link onClick={scrollTo} to="/" className="mt-3 text-[#716B66] font-poppins text-[16px] not-italic font-normal leading-normal">Home</Link>
+            <Link onClick={scrollTo} to="/about" className="text-[#716B66] font-poppins text-[16px] not-italic font-normal leading-normal">About Us</Link>
+            <Link onClick={scrollTo} to="/product" className="text-[#716B66] font-poppins text-[16px] not-italic font-normal leading-normal">Products</Link>
+            <Link onClick={scrollTo} to="/contact" className="text-[#716B66] font-poppins text-[16px] not-italic font-normal leading-normal" >Contact Us</Link>
           </div>
           <div className="flex flex-col gap-5">
             <h2 className="text-[#1E1E1E] font-nohemi text-[20px] font-medium leading-normal not-italic">News Letter</h2>

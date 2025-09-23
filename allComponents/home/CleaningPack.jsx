@@ -1,60 +1,75 @@
-function CleaningPack (){
-    return(
-        <section className="hidden pl-[5%] pr-[5%] mt-[5%] items-center lg:flex justify-between gap-5">
-          <div>
-            <img src="/left-arrow.png" alt="" />
-          </div>
-          <div className='grid lg:grid-cols-5 md:grid-cols-3 gap-5'>
-            <div className="flex flex-col">
-              <div className="px-[17px] py-[20px] flex justify-center items-center border border-black/10 bg-white">
-                <img src="/cleaning-pack1.png" alt="" className="w-[147px] h-[147px]" />
-              </div>
-              <p className="text-[#0F0F0F] font-poppins text-[16px] not-italic font-medium leading-normal text-center">
-                Vulval Toilet Cleaning Pack
-              </p>
-            </div>
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import React from "react";
+import { Navigation, Mousewheel } from "swiper/modules";
+import CleaningPackCard from "./CleaningPackCard";
 
-            <div className="flex flex-col">
-              <div className="px-[17px] py-[20px] flex justify-center items-center border border-black/10 bg-white">
-                <img src="/cleaning-pack.png" alt="" className="w-[147px] h-[147px]" />
-              </div>
-              <p class="text-[#0F0F0F] font-poppins text-[16px] not-italic font-medium leading-normal text-center">
-                Vulval Toilet Cleaning Pack
-              </p>
-            </div>
+function CleaningPack() {
+  const cleaningpack = [
+    { id: 1, 
+      name: "Vulval Toilet Cleaning Pack", 
+      image: "/cleaning-pack5.png" },
+    { 
+      id: 2, 
+      name: "Vulval Toilet Cleaning Pack", 
+      image: "/cleaning-pack.png" },
+    { 
+      id: 3, 
+      name: "Vulval Toilet Cleaning Pack", 
+      image: "/cleaning-pack.png" },
+    { 
+      id: 4, 
+      name: "Vulval Toilet Cleaning Pack", 
+      image: "/cleaning-pack3.png" },
+    { 
+      id: 5, 
+      name: "Vulval Toilet Cleaning Pack", 
+      image: "/cleaning-pack5.png" },
+    { 
+      id: 6, 
+      name: "Vulval Toilet Cleaning Pack", 
+      image: "/cleaning-pack4.png" },
+    { 
+      id: 7, 
+      name: "Vulval Toilet Cleaning Pack", 
+      image: "/cleaning-pack3.png" },
+  ];
 
-            <div className="flex flex-col">
-              <div className="px-[17px] py-[20px] flex justify-center items-center border border-black/10 bg-white">
-                <img src="/cleaning-pack3.png" alt="" className="w-[147px] h-[147px]" />
-              </div>
-              <p className="text-[#0F0F0F] font-poppins text-[16px] not-italic font-medium leading-normal text-center">
-                Vulval Toilet Cleaning Pack
-              </p>
-            </div>
+  return (
+    <section className="pl-[5%] pr-[5%] mt-[5%] items-center flex justify-between gap-5">
+      <div className="prev-btn z-50 cursor-pointer pointer-events-auto w-[65px]">
+        <img src="/left-arrow.png" alt="left-arrow" className="w-[65px]" />
+      </div>
 
-            <div className="flex flex-col">
-              <div className="px-[17px] py-[20px] flex justify-center items-center border border-black/10 bg-white">
-                <img src="/cleaning-pack4.png" alt="" className="w-[147px] h-[147px]" />
-              </div>
-              <p className="text-[#0F0F0F] font-poppins text-[16px] not-italic font-medium leading-normal text-center">
-                Vulval Toilet Cleaning Pack
-              </p>
-            </div>
+      <Swiper
+        spaceBetween={20}
+        modules={[Navigation, Mousewheel]}
+        loop={true}
+        navigation={{
+          prevEl: ".prev-btn",
+          nextEl: ".next-btn",
+        }}
+        mousewheel={true}
+        breakpoints={{
+          1120: { slidesPerView: 5 },
+          1000: { slidesPerView: 4 },
+          800: { slidesPerView: 3 },
+          500: { slidesPerView: 2 },
+          0: { slidesPerView: 1 },
+        }}
+      >
+        {cleaningpack.map((item) => (
+          <SwiperSlide key={item.id}>
+            <CleaningPackCard cleaningpack={item} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-            <div className="flex flex-col">
-              <div className="px-[17px] py-[20px] flex justify-center items-center border border-black/10 bg-white">
-                <img src="/cleaning-pack5.png" alt="" className="w-[147px] h-[147px]" />
-              </div>
-              <p className="text-[#0F0F0F] font-poppins text-[16px] not-italic font-medium leading-normal text-center">
-                Vulval Toilet Cleaning Pack
-              </p>
-            </div></div>
-
-          <div>
-            <img src="/right-arrow.png" alt="" />
-          </div>
-        </section>
-    )
+      <div className="next-btn z-50 cursor-pointer pointer-events-auto w-[65px]">
+        <img src="/right-arrow.png" alt="right-arrow" className="w-[65px]" />
+      </div>
+    </section>
+  );
 }
 
 export default CleaningPack;

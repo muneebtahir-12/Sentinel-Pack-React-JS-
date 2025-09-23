@@ -1,6 +1,6 @@
 function AboutCompany(){
     return(
-        <section className="md:pl-[7%] md:pr-[5%] pl-[5%] pr-[5%] flex flex-col lg:justify-between lg:flex-row  mt-[5%] mb-[10%] items-center">
+        <section className="md:pl-[7%] md:pr-[5%] pl-[5%] pr-[5%] flex flex-col lg:justify-between lg:flex-row  mt-[5%] mb-[10%] items-center gap-5">
   <div className="flex flex-col lg:gap-3 ">
     <h3 className="text-[#0F0F0F] font-nohemi text-[26px] sm:text-[40px] not-italic font-normal leading-normal text-left">
       About Company
