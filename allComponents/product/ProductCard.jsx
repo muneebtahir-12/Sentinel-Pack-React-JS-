@@ -10,13 +10,13 @@ const ProductsCard = ({ products }) => {
       </div>
 
       {/* Details Section */}
-      <div className="flex flex-col gap-[9px] text-center sm:text-left">
-        <p className="text-[#0F0F0F] font-poppins text-[18px] font-light h-[50px] ">
+      <div className="grid gap-[9px]  sm:text-left">
+        <p className="text-[#0F0F0F] font-poppins text-[20px] font-light h-[50px] ">
           {products.name}
         </p>
 
         {/* Ratings */}
-        <div className="flex gap-1 items-center justify-center sm:justify-start">
+        <div className="flex gap-1 ">
           <span className="text-[#7C7C7C] font-poppins text-[13px]">4.7</span>
           <img src="/filled-star.png" alt="filled-star" className="w-[17px] h-[17px]" />
           <img src="/filled-star.png" alt="filled-star" className="w-[17px] h-[17px]" />
@@ -26,7 +26,7 @@ const ProductsCard = ({ products }) => {
           <span className="text-[#7C7C7C] font-poppins text-[13px]">(23)</span>
         </div>
 
-        <p className="text-[#0F0F0F] font-poppins text-[17px]">
+        <p className="text-[#0F0F0F] font-poppins text-[18px]">
           {products.ref}
         </p>
 
@@ -37,7 +37,7 @@ const ProductsCard = ({ products }) => {
   onClick={() => {
     window.scrollTo(0, 0);
   }}
-  className="self-center sm:self-start flex px-3 py-2 w-[200px] sm:w-[150px] justify-center items-center gap-1 rounded-lg bg-[linear-gradient(90deg,#1B7F75_0%,#4EA291_100%)] text-white font-poppins font-medium"
+  className=" flex px-3 py-2 justify-center items-center gap-1 rounded-lg bg-[linear-gradient(90deg,#1B7F75_0%,#4EA291_100%)] text-white font-poppins font-medium"
 >
   View Product
 </Link>

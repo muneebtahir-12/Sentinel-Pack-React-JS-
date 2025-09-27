@@ -26,7 +26,7 @@ const products = [
         type: ["two-colo","two-colo"]
     }, {
         id: 5,
-        name: "Lithotomy Pack",
+        name: "Lithotomy Pack Pack Pack",
         ref: "REF CHK-007",
         image: "/product1.png",
         type: ["two-colo","one-ostr"]

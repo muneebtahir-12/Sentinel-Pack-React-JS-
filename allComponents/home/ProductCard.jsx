@@ -20,7 +20,7 @@ const ProductCard = ({product}) => {
                   <span className="text-[#7C7C7C] font-poppins text-[13px] not-italic font-normal leading-normal ">(23)</span>
                 </div>
                 <p class="text-[#0F0F0F] font-poppins text-[17px] not-italic font-normal leading-normal ">REF CHK-007</p>
-                <Link onClick={()=>{window.scrollTo(0,0)}} to={`/product/${product.name.replace(/\s+/g, "-").toLowerCase()}`} class="flex px-[20px] py-[9px] justify-center items-center gap-1 rounded-lg bg-[linear-gradient(90deg,#1B7F75_0%,#4EA291_100%)] text-white font-poppins font-medium cursor-pointer w-[150px]">View Details</Link>
+                <Link onClick={()=>{window.scrollTo(0,0)}} to={`/product/${product.name.replace(/\s+/g, "-").toLowerCase()}`} class="flex px-[20px] py-[9px] justify-center items-center gap-1 rounded-lg bg-[linear-gradient(90deg,#1B7F75_0%,#4EA291_100%)] text-white font-poppins font-medium cursor-pointer">View Details</Link>
               </div>
             </div>
   )
