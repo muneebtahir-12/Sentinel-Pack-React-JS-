@@ -3,38 +3,8 @@ import "swiper/css";
 import React from "react";
 import { Navigation, Mousewheel } from "swiper/modules";
 import CleaningPackCard from "./CleaningPackCard";
-
+import cleaningpack from "./CleaningPackData";
 function CleaningPack() {
-  const cleaningpack = [
-    { id: 1, 
-      name: "Vulval Toilet Cleaning Pack", 
-      image: "/cleaning-pack5.png" },
-    { 
-      id: 2, 
-      name: "Vulval Toilet Cleaning Pack", 
-      image: "/cleaning-pack.png" },
-    { 
-      id: 3, 
-      name: "Vulval Toilet Cleaning Pack", 
-      image: "/cleaning-pack.png" },
-    { 
-      id: 4, 
-      name: "Vulval Toilet Cleaning Pack", 
-      image: "/cleaning-pack3.png" },
-    { 
-      id: 5, 
-      name: "Vulval Toilet Cleaning Pack", 
-      image: "/cleaning-pack5.png" },
-    { 
-      id: 6, 
-      name: "Vulval Toilet Cleaning Pack", 
-      image: "/cleaning-pack4.png" },
-    { 
-      id: 7, 
-      name: "Vulval Toilet Cleaning Pack", 
-      image: "/cleaning-pack3.png" },
-  ];
-
   return (
     <section className="pl-[5%] pr-[5%] mt-[5%] items-center flex justify-between gap-5">
       <div className="prev-btn z-50 cursor-pointer pointer-events-auto w-[65px]">

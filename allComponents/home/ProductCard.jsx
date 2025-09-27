@@ -1,13 +1,13 @@
 import React from 'react'
-
+import {Link} from "react-router-dom"
 const ProductCard = ({product}) => {
   return (
-     <div className="flex flex-col bg-white border  border-black/10 p-5 gap-3 items-center">
-              <div className="  pt-[6px] pb-[7px]">
-                <img src={product.image} alt="product1" className="w-[132px] h-[145px]" />
+     <div className=" bg-white border  border-black/10 p-5 grid gap-5">
+              <div className="  pt-[6px] pb-[7px]  ">
+                <img src={product.image} alt="product1" className="w-[100vw] sm:w-[400px] h-[150px] object-contain" />
               </div>
               <div className=" flex flex-col gap-2">
-                <p className="text-[#0F0F0F] font-poppins text-[16px] not-italic font-medium leading-normal ">
+                <p className="sm:w-[100%] w-[80%] h-[50px] md:h-[70px] text-[#0F0F0F] font-poppins text-[16px] not-italic font-medium leading-normal ">
                     {product.name}
                 </p>
                 <div className="flex gap-1">
@@ -20,7 +20,7 @@ const ProductCard = ({product}) => {
                   <span className="text-[#7C7C7C] font-poppins text-[13px] not-italic font-normal leading-normal ">(23)</span>
                 </div>
                 <p class="text-[#0F0F0F] font-poppins text-[17px] not-italic font-normal leading-normal ">REF CHK-007</p>
-                <button class="flex px-[20px] py-[9px] justify-center items-center gap-1 rounded-lg bg-[linear-gradient(90deg,#1B7F75_0%,#4EA291_100%)] text-white font-poppins font-medium cursor-pointer w-[160px]">View Details</button>
+                <Link onClick={()=>{window.scrollTo(0,0)}} to={`/product/${product.name.replace(/\s+/g, "-").toLowerCase()}`} class="flex px-[20px] py-[9px] justify-center items-center gap-1 rounded-lg bg-[linear-gradient(90deg,#1B7F75_0%,#4EA291_100%)] text-white font-poppins font-medium cursor-pointer w-[150px]">View Details</Link>
               </div>
             </div>
   )

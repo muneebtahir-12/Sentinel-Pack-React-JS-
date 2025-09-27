@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 
 const ProductsCard = ({ products }) => {
   return (
-    <div className="flex flex-col bg-white border shadow border-black/10 p-10 gap-3 items-center">
+  <div className=" pl-[10%] pr-[10%] bg-white grid border shadow border-black/10 p-10 gap-3">
       {/* Image Section */}
       <div className="pt-[6px] pb-[7px]">
-        <img src={products.image} alt="product1" className="w-[150px] h-[160px]" />
+        <img src={products.image} alt="product1" className="sm:w-[300px] h-[150px] w-full object-contain" />
 
       </div>
 
       {/* Details Section */}
-      <div className="flex flex-col gap-2 text-center sm:text-left">
-        <p className="text-[#0F0F0F] font-poppins text-[19px] font-light">
+      <div className="flex flex-col gap-[9px] text-center sm:text-left">
+        <p className="text-[#0F0F0F] font-poppins text-[18px] font-light h-[50px] ">
           {products.name}
         </p>
 
@@ -31,14 +31,17 @@ const ProductsCard = ({ products }) => {
         </p>
 
         {/* Button */}
-        <Link
-          to={`/product/${products.name.replace(/\s+/g, "-").toLowerCase()}`} onClick={()=>{
-            window.scrollTo(0,0);
-          }}
-          className="flex px-3 py-2 w-[170px] justify-center items-center gap-1 rounded-lg bg-[linear-gradient(90deg,#1B7F75_0%,#4EA291_100%)] text-white font-poppins font-medium"
-        >
-          View Details
-        </Link>
+        
+         <Link
+  to={`/product/${products.name.replace(/\s+/g, "-").toLowerCase()}`}
+  onClick={() => {
+    window.scrollTo(0, 0);
+  }}
+  className="self-center sm:self-start flex px-3 py-2 w-[200px] sm:w-[150px] justify-center items-center gap-1 rounded-lg bg-[linear-gradient(90deg,#1B7F75_0%,#4EA291_100%)] text-white font-poppins font-medium"
+>
+  View Product
+</Link>
+
       </div>
     </div>
   );

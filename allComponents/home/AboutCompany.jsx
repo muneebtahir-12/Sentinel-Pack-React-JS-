@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 function AboutCompany (){
     return(
-        <section className="lg:pl-[11%] lg:pr-[11%] pl-[5%] pr-[5%] flex flex-col-reverse lg:flex-row gap-5 lg:gap-15 mt-[10%] mb-[10%] items-center">
+        <section  onClick={()=>{window.scrollTo(0,0)}} className="lg:pl-[11%] lg:pr-[11%] pl-[5%] pr-[5%] flex flex-col-reverse lg:flex-row gap-5 lg:gap-15 mt-[10%] mb-[10%] items-center">
           <img src="/company.png" alt="Company" class="lg:w-[454px] w-[100%]  sm:w-[60%] " />
 
           <div className="flex flex-col gap-3 ">

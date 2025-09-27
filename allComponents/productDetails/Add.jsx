@@ -3,18 +3,26 @@ import {useNavigate} from "react-router-dom";
 import { useParams } from "react-router-dom";
 import products from "../product/ProductData";
 import relatedproducts from "./RelatedProductData";
+import cleaningpack from "../home/CleaningPackData";
+import product from "../home/ProductsData"
 function Add() {
    
    const { name } = useParams();
 
-const product = products.find(
+const productpage = products.find(
   (p) => p.name.replace(/\s+/g, "-").toLowerCase() === name.toLowerCase()
 );
 const relatedProduct = relatedproducts.find(
   (p) => p.name.replace(/\s+/g, "-").toLowerCase() === name.toLowerCase()
 );
+const cleaningPack = cleaningpack.find(
+  (p) => p.name.replace(/\s+/g, "-").toLowerCase() === name.toLowerCase()
+);
+const homeprds =product.find(
+  (p) => p.name.replace(/\s+/g, "-").toLowerCase() === name.toLowerCase()
+);
 
-if (!product && !relatedProduct) {
+if (!product && !relatedProduct && !cleaningpack) {
   return <h2>Product not found</h2>;
 }
 
@@ -152,7 +160,8 @@ if (!product && !relatedProduct) {
                     </div>
                 </div>
                 <div className="flex flex-col gap-6 lg:w-1/2">
-                    <h4 className="text-2xl font-semibold">{product?product.name:relatedProduct.name}</h4>
+                    <h4 className="text-2xl font-semibold">{productpage?.name || relatedProduct?.name || cleaningPack?.name || homeprds?.name || ""}
+</h4>
                     <p className="text-[#716B66] font-poppins">Max Cut Skin Barrier Dia: 15-35mm / 87mm</p>
                     <p className="text-[#716B66] font-poppins">Remark: With 2 piece for option</p>
                     <p className="text-[#716B66] font-poppins text-[16px] leading-relaxed ">

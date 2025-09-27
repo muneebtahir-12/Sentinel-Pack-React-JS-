@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import React from "react";
-import { Navigation, Pagination} from "swiper/modules";
+import { Navigation, Pagination,Keyboard} from "swiper/modules";
 import "swiper/css/pagination";
 const About = () => {
   return (
@@ -14,8 +14,13 @@ const About = () => {
           prevEl: ".custom-prev",
           nextEl: ".custom-next",
         }}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination,Keyboard]}
         pagination={{ clickable: true }}
+        keyboard={{
+    enabled: true,
+    onlyInViewport: true, // jab tak swiper viewport me ho tab tak
+    pageUpDown: true      // PageUp/PageDown bhi kaam karega
+  }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >

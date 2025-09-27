@@ -6,7 +6,7 @@ function RelatedProducts(){
     <h4 className="text-[#0F0F0F] font-poppins text-[24px]  not-italic font-normal leading-[120%]">Related Products</h4>
   <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-1 ">
   {relatedproducts.map((relatedproducts)=>(
-    <RelatedProductsCard key={relatedproducts.id} relatedproducts={relatedproducts} />
+    <RelatedProductsCard key={relatedproducts.key} relatedproducts={relatedproducts} />
   ))}
   </div>
 </section>
