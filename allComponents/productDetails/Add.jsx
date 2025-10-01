@@ -163,13 +163,13 @@ if (!product && !relatedProduct && !cleaningpack) {
                     <h4 className="text-2xl font-semibold">{productpage?.name || relatedProduct?.name || cleaningPack?.name || homeprds?.name || ""}
 </h4>
                     <p className="text-[#716B66] font-poppins">Max Cut Skin Barrier Dia: 15-35mm / 87mm</p>
-                    <p className="text-[#716B66] font-poppins">Remark: With 2 piece for option</p>
+                    <p className="text-[#716B66] font-poppins">{`Remark: ${productpage?.remark || relatedProduct?.remark || cleaningPack?.remark || homeprds?.remark || ""}`}</p>
                     <p className="text-[#716B66] font-poppins text-[16px] leading-relaxed ">
-                        Alkaline peptone water is generally used as an enrichment medium...
+                        {productpage?.description || relatedProduct?.description || cleaningPack?.description || homeprds?.description || ""}
                     </p>
                     <div className="flex gap-10">
-                        <p className="text-[#716B66] font-normal">Availability: 100 in stock</p>
-                        <p className="text-[#716B66] font-normal">SKU: ILMPT-C</p>
+                        <p className="text-[#716B66] font-normal">{`Availability: ${productpage?.availability||relatedProduct?.availability||cleaningPack?.availability||homeprds?.availability}`}</p>
+                        <p className="text-[#716B66] font-normal">{`SKU: ${productpage?.sku||relatedProduct?.sku||cleaningPack?.sku||homeprds?.sku}`}</p>
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="flex items-center border rounded">

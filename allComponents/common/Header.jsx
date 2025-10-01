@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Header() {
   return (
+    <>
+
     <nav className="z-600 bg-white pt-[20px] pl-[5%] pr-[5%] relative">
       {/* Top bar */}
       <div className="justify-between hidden lg:flex items-center z-5">
@@ -35,15 +37,15 @@ function Header() {
         </div>
 
         {/* Desktop Shop Button */}
-        <button
+        <Link to="/product"
           className="lg:flex hidden items-center gap-2 bg-[linear-gradient(90deg,#1B7F75_0%,#4EA291_100%)] text-white font-poppins font-medium px-6 py-2 rounded-[8px] w-[168px] h-[48px] cursor-pointer"
         >
           <span>Shop Now</span>
           <img src="/shop-arrow.png" alt="" />
-        </button>
+        </Link>
 
         {/* Mobile menu button */}
-        <button
+        <button 
           id="menuBtn"
           className="lg:hidden"
           onClick={() => {
@@ -65,7 +67,7 @@ function Header() {
         <Link to="/product" className="hover:text-gray-400 text-[#171717] font-poppins text-[16px] font-normal">Product</Link>
         <Link to="/contact" className="hover:text-gray-400 text-[#171717] font-poppins text-[16px] font-normal">Contact Us</Link>
 
-        <button
+        <button onClick={()=>setIsFormOpen(true)}
           className="flex items-center gap-2 bg-[linear-gradient(90deg,#1B7F75_0%,#4EA291_100%)] 
                      text-white font-poppins font-medium px-6 py-2 rounded-[8px] 
                      w-[168px] h-[48px] cursor-pointer"
@@ -82,6 +84,7 @@ function Header() {
         </div>
       </div>
     </nav>
+    </>
   );
 }
 
